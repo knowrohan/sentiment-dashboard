@@ -21,7 +21,7 @@ const COLORS = ['#4ade80', '#f87171', '#94a3b8']
 async function fetchTopicStats(topics: string[]) {
     const queryParams = new URLSearchParams()
     topics.forEach(topic => queryParams.append('topics', topic))
-    const response = await fetch(`/api/stats?${queryParams}`)
+    const response = await fetch(`https://sentiment-dash-worker.rohan-a-patil.workers.dev/api/stats?${queryParams}`)
     if (!response.ok) throw new Error('Failed to fetch topic stats')
     return response.json() // { aggregated, breakdown }
   }
