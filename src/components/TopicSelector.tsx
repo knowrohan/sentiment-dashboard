@@ -7,7 +7,7 @@ interface TopicSelectorProps {
 }
 
 async function fetchTopics(): Promise<string[]> {
-  const response = await fetch('https://sentiment-dash-worker.rohan-a-patil.workers.dev/api/topics')
+  const response = await fetch('https://sentiment-dash-worker.rohanpatil.workers.dev/api/topics')
   if (!response.ok) {
     throw new Error('Failed to fetch topics')
   }

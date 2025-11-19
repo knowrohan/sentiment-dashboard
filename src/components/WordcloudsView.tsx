@@ -21,7 +21,7 @@ async function fetchWordclouds(topics: string[]): Promise<WordcloudData[]> {
   const queryParams = new URLSearchParams()
   topics.forEach(topic => queryParams.append('topics', topic))
   
-  const response = await fetch(`https://sentiment-dash-worker.rohan-a-patil.workers.dev/api/wordclouds?${queryParams}`)
+  const response = await fetch(`https://sentiment-dash-worker.rohanpatil.workers.dev/api/wordclouds?${queryParams}`)
   if (!response.ok) {
     throw new Error('Failed to fetch wordcloud data')
   }

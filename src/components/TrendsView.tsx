@@ -32,7 +32,7 @@ async function fetchTrendData(topics: string[]): Promise<TrendData[]> {
   const queryParams = new URLSearchParams()
   topics.forEach(topic => queryParams.append('topics', topic))
   
-  const response = await fetch(`https://sentiment-dash-worker.rohan-a-patil.workers.dev/api/trends?${queryParams}`)
+  const response = await fetch(`https://sentiment-dash-worker.rohanpatil.workers.dev/api/trends?${queryParams}`)
   if (!response.ok) {
     throw new Error('Failed to fetch trend data')
   }
